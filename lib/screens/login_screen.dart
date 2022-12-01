@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:gov_demo/utils/colors.dart';
 
 enum pageType {
   citizen,
@@ -33,8 +34,8 @@ class _LoginScreenState extends State<LoginScreen> {
         Container(
           height: double.maxFinite,
           width: double.maxFinite,
-          decoration: const BoxDecoration(
-            color: Color.fromARGB(232, 24, 96, 27),
+          decoration: BoxDecoration(
+            color: AppColors.mainColor,
           ),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -168,7 +169,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             height: 55,
                             width: double.maxFinite,
                             decoration: BoxDecoration(
-                              color: Color.fromARGB(231, 31, 77, 34),
+                              color: AppColors.mainColor,
                               borderRadius: BorderRadius.circular(5),
                             ),
                             child: Center(
@@ -219,7 +220,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             height: 55,
                             width: double.maxFinite,
                             decoration: BoxDecoration(
-                              color: Color.fromARGB(231, 31, 77, 34),
+                              color: AppColors.mainColor,
                               borderRadius: BorderRadius.circular(5),
                             ),
                             child: Center(
