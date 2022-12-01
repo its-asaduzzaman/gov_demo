@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:gov_demo/screens/dashboard_screen.dart';
 import 'package:gov_demo/screens/home_page.dart';
 import 'package:gov_demo/screens/login_screen.dart';
+import 'package:gov_demo/screens/totho_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const HomePage(),
+      home: const TothoScreen(),
     );
   }
 }

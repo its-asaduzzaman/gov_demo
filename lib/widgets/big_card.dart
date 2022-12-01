@@ -20,9 +20,13 @@ class BigCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       // elevated shadow here
-      decoration: BoxDecoration(boxShadow: [
-        BoxShadow(color: Colors.grey.shade600, spreadRadius: 1, blurRadius: 2)
-      ], color: Colors.white, borderRadius: BorderRadius.circular(5)),
+      decoration: BoxDecoration(
+        boxShadow: [
+          BoxShadow(color: Colors.grey.shade600, spreadRadius: 1, blurRadius: 2)
+        ],
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(5),
+      ),
       child: Column(
         children: [
           Container(

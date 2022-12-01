@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 class SmallSizeText extends StatelessWidget {
   final String text;
   Color? color;
-  SmallSizeText({Key? key, required this.text, this.color = Colors.white})
+  double? size;
+  SmallSizeText(
+      {Key? key, required this.text, this.color = Colors.white, this.size = 11})
       : super(key: key);
 
   @override
@@ -11,7 +13,10 @@ class SmallSizeText extends StatelessWidget {
     return Text(
       text,
       textAlign: TextAlign.center,
-      style: TextStyle(fontSize: 11, color: color),
+      style: TextStyle(
+        fontSize: size,
+        color: color,
+      ),
     );
   }
 }
