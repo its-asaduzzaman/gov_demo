@@ -5,9 +5,15 @@ import 'icon_text_widget.dart';
 
 class BigCard extends StatelessWidget {
   final String mainText;
+  final String smallText1;
+  final String smallText2;
+  final String smallText3;
   const BigCard({
     Key? key,
     required this.mainText,
+    required this.smallText1,
+    required this.smallText2,
+    required this.smallText3,
   }) : super(key: key);
 
   @override
@@ -46,17 +52,17 @@ class BigCard extends StatelessWidget {
                 IconsAndText(
                   icon: Icons.auto_awesome_mosaic_outlined,
                   backGroundColor: AppColors.mainColor,
-                  text: "Holding\nEntry",
+                  text: smallText1,
                 ),
                 IconsAndText(
                   icon: Icons.auto_awesome_mosaic_outlined,
                   backGroundColor: AppColors.purpleColor,
-                  text: "Holding Card\nActivity",
+                  text: smallText2,
                 ),
                 IconsAndText(
                   icon: Icons.flash_on_outlined,
                   backGroundColor: AppColors.orangeColor,
-                  text: "Holding Card\nActivity",
+                  text: smallText3,
                 ),
               ],
             ),

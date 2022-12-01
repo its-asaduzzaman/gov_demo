@@ -114,12 +114,18 @@ class _DashboardScreenState extends State<DashboardScreen> {
                   //  big cards
                   BigCard(
                     mainText: "Holding",
+                    smallText1: "Holding\nEntry",
+                    smallText2: "Holding Card\nActivity",
+                    smallText3: "Payment\nReceive",
                   ),
                   SizedBox(
                     height: 25,
                   ),
                   BigCard(
                     mainText: "Trading",
+                    smallText1: "Trading\nEntry",
+                    smallText2: "Trading Card\nActivity",
+                    smallText3: "Payment\nReceive",
                   ),
                 ],
               ),
