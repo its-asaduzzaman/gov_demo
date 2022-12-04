@@ -3,6 +3,7 @@ import 'package:gov_demo/utils/colors.dart';
 import 'package:gov_demo/widgets/medium_text_widget.dart';
 import 'package:gov_demo/widgets/small_text_widget.dart';
 
+import '../widgets/table_widget.dart';
 import '../widgets/totho_name_widget.dart';
 
 enum pageType {
@@ -944,32 +945,40 @@ class _TothoScreenState extends State<TothoScreen> {
                     children: [
                       Container(
                         margin: EdgeInsets.all(0),
-                        padding: EdgeInsets.all(10),
+                        padding: EdgeInsets.all(15),
                         decoration: BoxDecoration(
                             border: Border.all(width: 1, color: Colors.black38),
                             borderRadius: BorderRadius.circular(5)),
                         width: double.maxFinite,
-                        height: 300,
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          crossAxisAlignment: CrossAxisAlignment.start,
+                        height: 360,
+                        child: Column(
                           children: [
-                            Container(),
-                            Container(
-                              height: 40,
-                              width: 150,
-                              decoration: BoxDecoration(
-                                color: Colors.redAccent,
-                                borderRadius: BorderRadius.circular(5),
-                              ),
-                              child: Center(
-                                child: MediumSizeText(
-                                  text: "নতুন তথ্য যোগ করুন",
-                                  size: 14,
-                                  weight: FontWeight.w400,
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Container(),
+                                Container(
+                                  height: 40,
+                                  width: 150,
+                                  decoration: BoxDecoration(
+                                    color: Colors.redAccent,
+                                    borderRadius: BorderRadius.circular(5),
+                                  ),
+                                  child: Center(
+                                    child: MediumSizeText(
+                                      text: "নতুন তথ্য যোগ করুন",
+                                      size: 14,
+                                      weight: FontWeight.w400,
+                                    ),
+                                  ),
                                 ),
-                              ),
+                              ],
                             ),
+                            SizedBox(
+                              height: 20,
+                            ),
+                            TableWidget(),
                           ],
                         ),
                       ),
