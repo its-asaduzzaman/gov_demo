@@ -2,6 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gov_demo/utils/colors.dart';
 
+import 'home_page.dart';
+
 enum pageType {
   citizen,
   admin,
@@ -173,10 +175,19 @@ class _LoginScreenState extends State<LoginScreen> {
                               borderRadius: BorderRadius.circular(5),
                             ),
                             child: Center(
-                              child: Text(
-                                "Log in",
-                                style: TextStyle(
-                                    fontSize: 18, color: Colors.white),
+                              child: GestureDetector(
+                                onTap: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => const HomePage()),
+                                  );
+                                },
+                                child: Text(
+                                  "Log in",
+                                  style: TextStyle(
+                                      fontSize: 18, color: Colors.white),
+                                ),
                               ),
                             ),
                           ),
@@ -224,10 +235,19 @@ class _LoginScreenState extends State<LoginScreen> {
                               borderRadius: BorderRadius.circular(5),
                             ),
                             child: Center(
-                              child: Text(
-                                "Log in",
-                                style: TextStyle(
-                                    fontSize: 18, color: Colors.white),
+                              child: GestureDetector(
+                                onTap: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => const HomePage()),
+                                  );
+                                },
+                                child: Text(
+                                  "Log in",
+                                  style: TextStyle(
+                                      fontSize: 18, color: Colors.white),
+                                ),
                               ),
                             ),
                           ),

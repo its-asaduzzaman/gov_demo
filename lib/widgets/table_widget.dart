@@ -13,10 +13,10 @@ class TableWidget extends StatelessWidget {
             width: 2,
             borderRadius: BorderRadius.circular(5)),
         columnWidths: const <int, TableColumnWidth>{
-          0: FixedColumnWidth(80),
+          0: FixedColumnWidth(90),
           1: FlexColumnWidth(),
           2: FlexColumnWidth(),
-          3: FixedColumnWidth(80),
+          3: FixedColumnWidth(100),
           4: FixedColumnWidth(50),
         },
         defaultVerticalAlignment: TableCellVerticalAlignment.middle,
@@ -51,6 +51,7 @@ class TableWidget extends StatelessWidget {
               child: MediumSizeText(
                 text: "পরিচয়পত্র নম্বর",
                 color: Colors.black,
+                size: 14,
               ),
             ),
             Padding(

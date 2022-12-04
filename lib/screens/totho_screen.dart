@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:gov_demo/screens/home_page.dart';
+import 'package:gov_demo/screens/profile_screen.dart';
 import 'package:gov_demo/utils/colors.dart';
 import 'package:gov_demo/widgets/medium_text_widget.dart';
 import 'package:gov_demo/widgets/small_text_widget.dart';
 
 import '../widgets/table_widget.dart';
-import '../widgets/totho_name_widget.dart';
 
 enum pageType {
   khana,
@@ -22,6 +23,7 @@ class TothoScreen extends StatefulWidget {
 
 class _TothoScreenState extends State<TothoScreen> {
   pageType selectedPage = pageType.khana;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -54,11 +56,11 @@ class _TothoScreenState extends State<TothoScreen> {
                       ),
                       child: Row(
                         children: [
-                          Icon(
+                          const Icon(
                             Icons.camera_alt_rounded,
                             color: Colors.black38,
                           ),
-                          SizedBox(
+                          const SizedBox(
                             width: 10,
                           ),
                           MediumSizeText(
@@ -72,6 +74,9 @@ class _TothoScreenState extends State<TothoScreen> {
                     ),
                   )
                 : Container(),
+            SizedBox(
+              height: 10,
+            ),
             //  All information
             Container(
               width: double.maxFinite,
@@ -85,9 +90,38 @@ class _TothoScreenState extends State<TothoScreen> {
                           selectedPage = pageType.khana;
                         });
                       },
-                      child: TothoNameWidget(
-                        text: "খানা প্রধানের\n"
-                            "তথ্য",
+                      child: Container(
+                        padding:
+                            EdgeInsets.symmetric(horizontal: 5, vertical: 10),
+                        decoration: BoxDecoration(
+                          border: selectedPage == pageType.khana
+                              ? const Border(
+                                  top: BorderSide(
+                                    color: Colors.black38,
+                                    width: 1.5,
+                                  ),
+                                  right: BorderSide(
+                                    color: Colors.black38,
+                                    width: 1.5,
+                                  ),
+                                  left: BorderSide(
+                                    color: Colors.black38,
+                                    width: 1.5,
+                                  ),
+                                )
+                              : const Border(),
+                        ),
+                        child: Text(
+                          "খানা প্রধানের\n"
+                          "তথ্য\n",
+                          style: TextStyle(
+                              color: selectedPage == pageType.khana
+                                  ? AppColors.mainColor
+                                  : Colors.black38,
+                              fontWeight: selectedPage == pageType.khana
+                                  ? FontWeight.bold
+                                  : null),
+                        ),
                       ),
                     ),
                   ),
@@ -98,8 +132,37 @@ class _TothoScreenState extends State<TothoScreen> {
                           selectedPage = pageType.thikana;
                         });
                       },
-                      child: TothoNameWidget(
-                        text: "ঠিকানা\n",
+                      child: Container(
+                        padding:
+                            EdgeInsets.symmetric(horizontal: 5, vertical: 10),
+                        decoration: BoxDecoration(
+                          border: selectedPage == pageType.thikana
+                              ? const Border(
+                                  top: BorderSide(
+                                    color: Colors.black38,
+                                    width: 1.5,
+                                  ),
+                                  right: BorderSide(
+                                    color: Colors.black38,
+                                    width: 1.5,
+                                  ),
+                                  left: BorderSide(
+                                    color: Colors.black38,
+                                    width: 1.5,
+                                  ),
+                                )
+                              : const Border(),
+                        ),
+                        child: Text(
+                          "ঠিকানা\n\n\n",
+                          style: TextStyle(
+                              color: selectedPage == pageType.thikana
+                                  ? AppColors.mainColor
+                                  : Colors.black38,
+                              fontWeight: selectedPage == pageType.thikana
+                                  ? FontWeight.bold
+                                  : null),
+                        ),
                       ),
                     ),
                   ),
@@ -110,9 +173,38 @@ class _TothoScreenState extends State<TothoScreen> {
                           selectedPage = pageType.onnano;
                         });
                       },
-                      child: TothoNameWidget(
-                        text: "অন্যান্য\n"
-                            "তথ্য",
+                      child: Container(
+                        padding:
+                            EdgeInsets.symmetric(horizontal: 5, vertical: 10),
+                        decoration: BoxDecoration(
+                          border: selectedPage == pageType.onnano
+                              ? const Border(
+                                  top: BorderSide(
+                                    color: Colors.black38,
+                                    width: 1.5,
+                                  ),
+                                  right: BorderSide(
+                                    color: Colors.black38,
+                                    width: 1.5,
+                                  ),
+                                  left: BorderSide(
+                                    color: Colors.black38,
+                                    width: 1.5,
+                                  ),
+                                )
+                              : const Border(),
+                        ),
+                        child: Text(
+                          "অন্যান্য\n"
+                          "তথ্য\n",
+                          style: TextStyle(
+                              color: selectedPage == pageType.onnano
+                                  ? AppColors.mainColor
+                                  : Colors.black38,
+                              fontWeight: selectedPage == pageType.onnano
+                                  ? FontWeight.bold
+                                  : null),
+                        ),
                       ),
                     ),
                   ),
@@ -123,9 +215,38 @@ class _TothoScreenState extends State<TothoScreen> {
                           selectedPage = pageType.paribarik;
                         });
                       },
-                      child: TothoNameWidget(
-                        text: "পারিবারিক সম্পর্ক\n"
-                            "সংক্রান্ত তথ্য",
+                      child: Container(
+                        padding:
+                            EdgeInsets.symmetric(horizontal: 5, vertical: 10),
+                        decoration: BoxDecoration(
+                          border: selectedPage == pageType.paribarik
+                              ? const Border(
+                                  top: BorderSide(
+                                    color: Colors.black38,
+                                    width: 1.5,
+                                  ),
+                                  right: BorderSide(
+                                    color: Colors.black38,
+                                    width: 1.5,
+                                  ),
+                                  left: BorderSide(
+                                    color: Colors.black38,
+                                    width: 1.5,
+                                  ),
+                                )
+                              : Border(),
+                        ),
+                        child: Text(
+                          "পারিবারিক সম্পর্ক\n"
+                          "সংক্রান্ত তথ্য",
+                          style: TextStyle(
+                              color: selectedPage == pageType.paribarik
+                                  ? AppColors.mainColor
+                                  : Colors.black38,
+                              fontWeight: selectedPage == pageType.paribarik
+                                  ? FontWeight.bold
+                                  : null),
+                        ),
                       ),
                     ),
                   ),
@@ -1023,16 +1144,33 @@ class _TothoScreenState extends State<TothoScreen> {
         unselectedItemColor: Colors.white,
         items: [
           BottomNavigationBarItem(
-            icon: Icon(
-              Icons.home_outlined,
-              color: Colors.white,
+            icon: GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const HomePage()),
+                );
+              },
+              child: Icon(
+                Icons.home_outlined,
+                color: Colors.white,
+              ),
             ),
             label: "Home",
           ),
           BottomNavigationBarItem(
-            icon: Icon(
-              Icons.person,
-              color: Colors.white,
+            icon: GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const ProfileScreen()),
+                );
+              },
+              child: Icon(
+                Icons.person,
+                color: Colors.white,
+              ),
             ),
             label: "Person",
           ),

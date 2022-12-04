@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gov_demo/screens/totho_screen.dart';
 import 'package:gov_demo/utils/colors.dart';
 
 import '../widgets/big_card.dart';
@@ -32,10 +33,19 @@ class _DashboardScreenState extends State<DashboardScreen> {
                 SizedBox(
                   height: 60,
                 ),
-                CircleAvatar(
-                  backgroundColor: Colors.white,
-                  radius: 25,
-                  backgroundImage: AssetImage("assets/image/logo.png"),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const TothoScreen()),
+                    );
+                  },
+                  child: CircleAvatar(
+                    backgroundColor: Colors.white,
+                    radius: 25,
+                    backgroundImage: AssetImage("assets/image/logo.png"),
+                  ),
                 ),
                 SizedBox(
                   height: 10,

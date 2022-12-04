@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gov_demo/screens/login_screen.dart';
 import 'package:gov_demo/utils/colors.dart';
 import 'package:gov_demo/widgets/small_text_widget.dart';
 
@@ -159,9 +160,18 @@ class ProfileScreen extends StatelessWidget {
                 borderRadius: BorderRadius.circular(5),
               ),
               child: Center(
-                child: Text(
-                  "Logout",
-                  style: TextStyle(fontSize: 18, color: Colors.white),
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const LoginScreen()),
+                    );
+                  },
+                  child: Text(
+                    "Logout",
+                    style: TextStyle(fontSize: 18, color: Colors.white),
+                  ),
                 ),
               ),
             ),
