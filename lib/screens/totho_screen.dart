@@ -109,7 +109,12 @@ class _TothoScreenState extends State<TothoScreen> {
                                     width: 1.5,
                                   ),
                                 )
-                              : const Border(),
+                              : const Border(
+                                  bottom: BorderSide(
+                                    color: Colors.black38,
+                                    width: 2,
+                                  ),
+                                ),
                         ),
                         child: Text(
                           "খানা প্রধানের\n"
@@ -151,7 +156,12 @@ class _TothoScreenState extends State<TothoScreen> {
                                     width: 1.5,
                                   ),
                                 )
-                              : const Border(),
+                              : const Border(
+                                  bottom: BorderSide(
+                                    color: Colors.black38,
+                                    width: 2,
+                                  ),
+                                ),
                         ),
                         child: Text(
                           "ঠিকানা\n\n\n",
@@ -192,7 +202,12 @@ class _TothoScreenState extends State<TothoScreen> {
                                     width: 1.5,
                                   ),
                                 )
-                              : const Border(),
+                              : const Border(
+                                  bottom: BorderSide(
+                                    color: Colors.black38,
+                                    width: 2,
+                                  ),
+                                ),
                         ),
                         child: Text(
                           "অন্যান্য\n"
@@ -234,7 +249,12 @@ class _TothoScreenState extends State<TothoScreen> {
                                     width: 1.5,
                                   ),
                                 )
-                              : Border(),
+                              : const Border(
+                                  bottom: BorderSide(
+                                    color: Colors.black38,
+                                    width: 2,
+                                  ),
+                                ),
                         ),
                         child: Text(
                           "পারিবারিক সম্পর্ক\n"
@@ -258,11 +278,24 @@ class _TothoScreenState extends State<TothoScreen> {
                 ? Column(
                     children: [
                       Container(
-                        margin: EdgeInsets.all(0),
-                        padding: EdgeInsets.all(10),
-                        decoration: BoxDecoration(
-                            border: Border.all(width: 1, color: Colors.black38),
-                            borderRadius: BorderRadius.circular(5)),
+                        margin: const EdgeInsets.all(0),
+                        padding: const EdgeInsets.all(10),
+                        decoration: const BoxDecoration(
+                          border: Border(
+                            bottom: BorderSide(
+                              color: Colors.black38,
+                              width: 2,
+                            ),
+                            right: BorderSide(
+                              color: Colors.black38,
+                              width: 2,
+                            ),
+                            left: BorderSide(
+                              color: Colors.black38,
+                              width: 2,
+                            ),
+                          ),
+                        ),
                         width: double.maxFinite,
                         height: 500,
                         child: ListView(
@@ -663,8 +696,21 @@ class _TothoScreenState extends State<TothoScreen> {
                         margin: EdgeInsets.all(0),
                         padding: EdgeInsets.all(10),
                         decoration: BoxDecoration(
-                            border: Border.all(width: 1, color: Colors.black38),
-                            borderRadius: BorderRadius.circular(5)),
+                          border: Border(
+                            bottom: BorderSide(
+                              color: Colors.black38,
+                              width: 2,
+                            ),
+                            right: BorderSide(
+                              color: Colors.black38,
+                              width: 2,
+                            ),
+                            left: BorderSide(
+                              color: Colors.black38,
+                              width: 2,
+                            ),
+                          ),
+                        ),
                         width: double.maxFinite,
                         height: 500,
                         child: ListView(
@@ -865,8 +911,21 @@ class _TothoScreenState extends State<TothoScreen> {
                         margin: EdgeInsets.all(0),
                         padding: EdgeInsets.all(10),
                         decoration: BoxDecoration(
-                            border: Border.all(width: 1, color: Colors.black38),
-                            borderRadius: BorderRadius.circular(5)),
+                          border: Border(
+                            bottom: BorderSide(
+                              color: Colors.black38,
+                              width: 2,
+                            ),
+                            right: BorderSide(
+                              color: Colors.black38,
+                              width: 2,
+                            ),
+                            left: BorderSide(
+                              color: Colors.black38,
+                              width: 2,
+                            ),
+                          ),
+                        ),
                         width: double.maxFinite,
                         height: 500,
                         child: ListView(
@@ -1068,8 +1127,21 @@ class _TothoScreenState extends State<TothoScreen> {
                         margin: EdgeInsets.all(0),
                         padding: EdgeInsets.all(15),
                         decoration: BoxDecoration(
-                            border: Border.all(width: 1, color: Colors.black38),
-                            borderRadius: BorderRadius.circular(5)),
+                          border: Border(
+                            bottom: BorderSide(
+                              color: Colors.black38,
+                              width: 2,
+                            ),
+                            right: BorderSide(
+                              color: Colors.black38,
+                              width: 2,
+                            ),
+                            left: BorderSide(
+                              color: Colors.black38,
+                              width: 2,
+                            ),
+                          ),
+                        ),
                         width: double.maxFinite,
                         height: 360,
                         child: Column(
